@@ -112,11 +112,20 @@
 
 
 
-          			<div class="game-iframe-container" id="game-player">
+          			<div class="game-iframe-container" id="game-player" style="display: none;">
           				<div id="mobile-back-button" draggable="true">
           					<i class="bi bi-x-circle-fill"></i>
           				</div>
           				<iframe class="game-iframe" id="game-area" src="https://23azostore.github.io/s8/geometry-dash/" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
+          			</div>
+          			
+          			<div id="mobile-play" style="display: block;">
+          				<div class="mobile-thumb-play">
+          					<img src="images/icon_game.png" alt="Geometry Dash">
+          				</div>
+          				<div id="mobile-play-btn" onclick="startGame()">
+          					<i class="bi bi-play-circle-fill"></i>
+          				</div>
           			</div>
           		</div>
 
@@ -1193,6 +1202,12 @@
 	<script type="text/javascript" src="js/lazysizes.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script>
+		function startGame() {
+			document.getElementById('mobile-play').style.display = 'none';
+			document.getElementById('game-player').style.display = 'block';
+		}
+	</script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
 	  </body>
