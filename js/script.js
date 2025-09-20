@@ -175,9 +175,6 @@ function show_leaderboard(data){
 			$("#load-more1").removeClass('disabled');
 		}
 	}
-	$('#mobile-play-btn').on('click', function(e) {
-		open_fullscreen();
-	});
 	$('.b-action #favorite').on('click', function(e) {
 		e.preventDefault();
 		let data_id = $('.game-content').attr('data-id');
